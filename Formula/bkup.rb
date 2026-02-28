@@ -1,8 +1,8 @@
 class Bkup < Formula
   desc "Backup directories to a restic repository on Backblaze B2"
   homepage "https://github.com/sschlesier/bkup"
-  url "https://github.com/sschlesier/bkup/archive/refs/tags/v1.0.0.tar.gz"
-  sha256 "dfebe94584972d9794c574c235692cb0dbe353c385e77c6246d746b6dee8a47c"
+  url "https://github.com/sschlesier/bkup/archive/refs/tags/v1.0.1.tar.gz"
+  sha256 "121bff0a16db6e90df6e42c6b1d00a9f8951fb75176bf7cdff3b0ea2fd971ac1"
   license "MIT"
 
   depends_on "restic"
@@ -14,24 +14,12 @@ class Bkup < Formula
     bin.install "bin/bkup-status"
   end
 
-  service do
-    run [opt_bin/"bkup"]
-    cron "33 2 * * *"
-    process_type :background
-    log_path var/"log/bkup.log"
-    error_log_path var/"log/bkup.log"
-  end
-
   def caveats
     <<~EOS
-      Before starting bkup, run the setup wizard to configure credentials and
-      directories:
+      Run the setup wizard to configure credentials, directories, and install
+      the launchd service (which wakes the machine for nightly backups):
 
         bkup init
-
-      Then start the daily backup service:
-
-        brew services start bkup
 
       Per-machine config is stored in ~/.config/bkup/:
         env   - credentials (chmod 600, never committed)
