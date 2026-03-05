@@ -1,8 +1,8 @@
 class Cage < Formula
   desc "Run Claude Code inside an isolated Linux VM"
   homepage "https://github.com/sschlesier/cage"
-  url "https://github.com/sschlesier/cage/archive/refs/tags/v0.2.0.tar.gz"
-  sha256 "e48f96714321c11f97d2786b662e41b4419fbf2479e8885e903077de730397ab"
+  url "https://github.com/sschlesier/cage/archive/refs/tags/v0.2.1.tar.gz"
+  sha256 "8f238be461d27f13c581aa2c288e65e315cbcd178fe31bfe2e7a44eadaa2b251"
   license :cannot_represent
 
   depends_on "container"
