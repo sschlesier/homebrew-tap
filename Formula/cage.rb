@@ -4,6 +4,7 @@ class Cage < Formula
   url "https://github.com/sschlesier/cage/archive/refs/tags/v0.2.2.tar.gz"
   sha256 "43bf19ab050aee1df4d3f6ed00b227b84fb12b21767cca068a36531f1bd27fe3"
   license "MIT"
+  revision 1
 
   depends_on "container"
   depends_on :macos
