@@ -1,8 +1,8 @@
 class Bkup < Formula
   desc "Backup directories to a restic repository on Backblaze B2"
   homepage "https://github.com/sschlesier/bkup"
-  url "https://github.com/sschlesier/bkup/archive/refs/tags/v1.1.0.tar.gz"
-  sha256 "36551148fb2ecee0993feb98acdc52950f4d099bfc7ccbab57f9571bedeccbff"
+  url "https://github.com/sschlesier/bkup/archive/refs/tags/v1.2.0.tar.gz"
+  sha256 "6f745f11564c35873ebd84202430ddb6e603a012ea04843e5e17cd6db7bd5125"
   license "MIT"
 
   depends_on "restic"
@@ -12,6 +12,7 @@ class Bkup < Formula
     bin.install "bin/bkup"
     bin.install "bin/bkup-init"
     bin.install "bin/bkup-status"
+    bin.install "bin/bkup-logs" if (buildpath / "bin/bkup-logs").exist?
   end
 
   def caveats
@@ -30,5 +31,6 @@ class Bkup < Formula
   test do
     assert_match "Usage: bkup", shell_output("#{bin}/bkup --help")
     assert_match "Usage: bkup-status", shell_output("#{bin}/bkup-status --help")
+    assert_match "Usage: bkup-logs", shell_output("#{bin}/bkup-logs --help") if (bin / "bkup-logs").exist?
   end
 end
