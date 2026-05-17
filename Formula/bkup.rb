@@ -1,8 +1,8 @@
 class Bkup < Formula
   desc "Backup directories to a restic repository on Backblaze B2"
   homepage "https://github.com/sschlesier/bkup"
-  url "https://github.com/sschlesier/bkup/archive/refs/tags/v1.2.2.tar.gz"
-  sha256 "d15d6146e7a28814a59b5df6964e44071cb159e460d0558fad7130b7de3b319f"
+  url "https://github.com/sschlesier/bkup/archive/refs/tags/v1.3.0.tar.gz"
+  sha256 "d93dfa62bc76aa6b39ef34e45d22213a6471b756a7b9b845c476fe29c98f4d1c"
   license "MIT"
 
   depends_on "restic"
@@ -30,7 +30,7 @@ class Bkup < Formula
 
   test do
     assert_match "Usage: bkup", shell_output("#{bin}/bkup --help")
-    assert_match "Usage: bkup-status", shell_output("#{bin}/bkup-status --help")
+    assert_match "Usage: bkup status", shell_output("#{bin}/bkup-status --help")
     assert_match "Usage: bkup-logs", shell_output("#{bin}/bkup-logs --help") if (bin / "bkup-logs").exist?
   end
 end
