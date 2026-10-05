@@ -14,3 +14,4 @@ brew tap sschlesier/tap
 | Formula | Description |
 |---|---|
 | `bkup` | Nightly backup to a restic/Backblaze B2 repository with launchd WakeSystem support |
+| `spx` | Terminal browser for the spec store |
