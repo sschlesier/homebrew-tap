@@ -1,7 +1,6 @@
 class Spx < Formula
   desc "Terminal browser for the spec store"
   homepage "https://github.com/sschlesier/spx"
-  version "0.1.0"
   license "MIT"
 
   livecheck do
