@@ -1,8 +1,8 @@
 class Bkup < Formula
   desc "Backup directories to a restic repository on Backblaze B2"
   homepage "https://github.com/sschlesier/bkup"
-  url "https://github.com/sschlesier/bkup/archive/refs/tags/v1.3.1.tar.gz"
-  sha256 "475be5f2aa46220323e8214833b16de2add674bfc82e8d0063450f8911545d37"
+  url "https://github.com/sschlesier/bkup/archive/refs/tags/v1.4.0.tar.gz"
+  sha256 "19efab656c6108a25196f336a8b7c1f0bf9028b69b979c01b5fb7753cabc8048"
   license "MIT"
 
   depends_on "restic"
