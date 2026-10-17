@@ -10,21 +10,21 @@ class Spx < Formula
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/sschlesier/spx/releases/download/v0.2.0/spx-macos-arm64"
-      sha256 "4cc0918c651b5e4c5507178ff919fd89977cfbb49de8c9573d5ab752c6f2010f"
+      url "https://github.com/sschlesier/spx/releases/download/v0.3.0/spx-macos-arm64"
+      sha256 "2ae6ecbd8187698b0dfe9f2319cb1fea3c8f0a5939cd6d6ffefd50a33fb10d83"
     else
-      url "https://github.com/sschlesier/spx/releases/download/v0.2.0/spx-macos-amd64"
-      sha256 "de54cd31c68569e0a9ae099d36838c3c7eba3469c98bf42a90112113748f1142"
+      url "https://github.com/sschlesier/spx/releases/download/v0.3.0/spx-macos-amd64"
+      sha256 "87644f120b4bd620ffd4cb22da49d513b131f03a1767b008f6f0467950724378"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/sschlesier/spx/releases/download/v0.2.0/spx-linux-arm64"
-      sha256 "8ee417f5ca8aeeff15ac01326bf7cba6301edbc5ee963cd9bd1483bdfbaacec2"
+      url "https://github.com/sschlesier/spx/releases/download/v0.3.0/spx-linux-arm64"
+      sha256 "be2b9cd10e1a105bd056b82b63a4db2b0e510a0a349de0f170ff69f49deab0c2"
     else
-      url "https://github.com/sschlesier/spx/releases/download/v0.2.0/spx-linux-amd64"
-      sha256 "2e104dfa36b6d816ec17302cb1a1556218704ff32e954535d224933f528d825b"
+      url "https://github.com/sschlesier/spx/releases/download/v0.3.0/spx-linux-amd64"
+      sha256 "02ac86a68a1a08f84459b9b75bcb18b02f9b1d13edf48215293d9b0910bebcf4"
     end
   end
 
